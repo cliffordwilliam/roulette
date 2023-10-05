@@ -1,0 +1,193 @@
+* {
+  /* outline: 1px solid red; */
+}
+
+body {
+  background-color: #012;
+}
+
+/* wheel container */
+.wheel-container {
+  position: relative;
+  margin-top: 64px;
+}
+
+/* arrow container */
+.wheel-container .arrow-container {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* arrow body */
+.wheel-container .body {
+  height: 50px;
+  width: 10px;
+  background-color: #fff;
+  margin: 0px auto;
+}
+
+/* arrow head */
+.wheel-container .head {
+  width: 0px;
+  height: 0px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #fff;
+}
+
+/* the whole wheel */
+.wheel {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 1 / 1;
+  margin: 0 auto;
+  overflow: hidden;
+
+  background-color: #aaa;
+  border-radius: 100%;
+
+  transform-origin: center;
+}
+
+/* wheel section container */
+.wheel .section-container {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+}
+
+/* wheel section */
+.wheel .section {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* sub sections shared */
+.wheel .section .sub {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/* sub section colors tools */
+.wheel .section .sub.r {
+  background-color: red;
+}
+.wheel .section .sub.o {
+  background-color: orange;
+}
+.wheel .section .sub.y {
+  background-color: yellow;
+}
+.wheel .section .sub.g {
+  background-color: green;
+}
+.wheel .section .sub.lb {
+  background-color: lightblue;
+}
+.wheel .section .sub.b {
+  background-color: blue;
+}
+.wheel .section .sub.p {
+  background-color: purple;
+}
+.wheel .section .sub.lp {
+  background-color: palevioletred;
+}
+.wheel .section .sub.p {
+  background-color: pink;
+}
+
+/* sub sections unique */
+.wheel .section .s0 {
+  transform: rotate(0deg);
+}
+.wheel .section .s1 {
+  transform: rotate(15deg);
+}
+.wheel .section .s2 {
+  transform: rotate(30deg);
+}
+.wheel .section .s3 {
+  transform: rotate(45deg);
+}
+.wheel .section .s4 {
+  transform: rotate(60deg);
+}
+.wheel .section .s5 {
+  transform: rotate(75deg);
+}
+
+/* top left */
+.wheel .section.tl .s0,
+.wheel .section.tl .s1,
+.wheel .section.tl .s2,
+.wheel .section.tl .s3,
+.wheel .section.tl .s4,
+.wheel .section.tl .s5 {
+  transform-origin: bottom right;
+}
+/* top right */
+.wheel .section.tr .s0,
+.wheel .section.tr .s1,
+.wheel .section.tr .s2,
+.wheel .section.tr .s3,
+.wheel .section.tr .s4,
+.wheel .section.tr .s5 {
+  transform-origin: bottom left;
+}
+/* bottom left */
+.wheel .section.bl .s0,
+.wheel .section.bl .s1,
+.wheel .section.bl .s2,
+.wheel .section.bl .s3,
+.wheel .section.bl .s4,
+.wheel .section.bl .s5 {
+  transform-origin: top right;
+}
+/* bottom right */
+.wheel .section.br .s0,
+.wheel .section.br .s1,
+.wheel .section.br .s2,
+.wheel .section.br .s3,
+.wheel .section.br .s4,
+.wheel .section.br .s5 {
+  transform-origin: top left;
+}
+
+/* spin button */
+.spin-button {
+  display: block;
+  margin: 0 auto;
+  margin-top: 64px;
+
+  aspect-ratio: 1 / 1;
+  padding: 16px;
+  border: 1px solid black;
+  border-radius: 200px;
+
+  font-size: large;
+  cursor: pointer;
+
+  background-color: #eef;
+  color: #110;
+  border-color: #110;
+
+  transition: background-color 0.2s ease-out, color 0.2s ease-out;
+}
+/* hover */
+.spin-button:hover {
+  background-color: #110;
+  color: #eef;
+  border-color: #eef;
+}
